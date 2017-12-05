@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <style type="text/css">
+      body {
+        margin: 10px;
+        white-space: nowrap;
+      }
+
+      h1 {
+        font-size: 15px;
+      }
+
+      #container {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      div#error{
+        color: red;
+        display: 'none';
+      }
+
+      div i{
+        font-weight: bold;
+      }
+
+      div#jwt{
+        color: green;
+        display: 'none';
+      }
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+    -->
+    <script src="popup.js"></script>
+  </head>
+
+  <body>
+    <div id="error"><i>access_token</i> not found.</div>
+    <div id="jwt"><i>access_token</i> copied to clipboard.</div>
+  </body>
+</html>
